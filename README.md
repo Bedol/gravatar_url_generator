@@ -3,10 +3,8 @@
 Aplication require RUBY >= 1.9.3
 Aplication to generate you gravatar url with your avatar assigned to your email. It's very siple.
 
+Runing app:
 ---
-
-## Runing app:
-
 In console:
     ruby gravatar.rb foo@bar.com 200
 
