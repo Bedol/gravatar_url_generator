@@ -13,7 +13,7 @@ class Gravatar
   def run
     puts "Running application ..."
     puts "Your email is: #{ @email }"
-    puts "You chose size: #{ @size }"
+    puts "You chose size: #{ @size }x#{ @size } px"
     puts "\nYour gravatr URL is: #{ url } " 
   end
 
