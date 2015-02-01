@@ -12,6 +12,7 @@ class Gravatar
 
   def run
     puts "Running application ..."
+    check_input
     puts "Your email is: #{ @email }"
     puts "You chose size: #{ @size }x#{ @size } px"
     puts "\nYour gravatr URL is: #{ url } " 
@@ -44,6 +45,13 @@ class Gravatar
     Digest::MD5.hexdigest @email
   end
 
+
+  def check_input
+    if ARGV.empty?
+      puts "Incorect input - please add email and size like below:\nruby gravatar.rb your_email avatar_size"
+      exit
+    end
+  end
 end
 
 g = Gravatar.new(ARGV[0], ARGV[1])
