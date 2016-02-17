@@ -5,8 +5,8 @@ class Gravatar
   attr_accessor :email, :size
 
   def initialize(email, size)
-    self.email = email.to_s 
-    self.size = size.to_i 
+    self.email = email.to_s
+    self.size = size.to_i
   end
 
 
@@ -14,7 +14,7 @@ class Gravatar
     puts "Running application ..."
     puts "Your email is: #{ @email }"
     puts "You chose size: #{ @size }x#{ @size } px"
-    puts "\nYour gravatr URL is: #{ url } " 
+    puts "\nYour gravatr URL is: #{ url } "
   end
 
 
@@ -38,9 +38,9 @@ class Gravatar
     "http://www.gravatar.com/avatar/#{ md5_mail }\?s=#{ size }"
   end
 
-  
+
   # crypting email
-  def code_email(source) 
+  def code_email(source)
     Digest::MD5.hexdigest @email
   end
 
